@@ -19,7 +19,7 @@ export function SignIn() {
             </p>
           </div>
 
-          <form action="space-y-4">
+          <form className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Seu email</Label>
               <Input id="email" type="email" />

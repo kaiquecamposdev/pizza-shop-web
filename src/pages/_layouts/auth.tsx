@@ -10,9 +10,10 @@ export function AuthLayout() {
           <span className="font-semibold">pizza.shop</span>
         </div>
         <footer className="text-sm">
-          Painel do parceiro %copy; pizza.shop {new Date().getFullYear()}
+          Painel do parceiro &copy; pizza.shop {new Date().getFullYear()}
         </footer>
       </div>
+
       <div className="flex items-center justify-center">
         <Outlet />
       </div>
