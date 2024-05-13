@@ -7,8 +7,8 @@ import { Separator } from './ui/separator'
 
 export function Header() {
   return (
-    <div className="flex items-center border-b">
-      <header className="flex h-16 items-center gap-6 px-6">
+    <header className="flex items-center border-b ">
+      <div className="flex h-16 items-center gap-6 px-6">
         <Pizza size={24} />
         <Separator orientation="vertical" className="h-6" />
         <nav className="flex items-center space-x-4 lg:space-x-6">
@@ -21,11 +21,11 @@ export function Header() {
             Pedidos
           </NavLink>
         </nav>
-      </header>
+      </div>
       <div className="ml-auto mr-4 flex gap-2">
         <ToggleTheme />
         <AccountMenu />
       </div>
-    </div>
+    </header>
   )
 }
