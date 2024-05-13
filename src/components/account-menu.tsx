@@ -31,11 +31,11 @@ export function AccountMenu() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
 
-        <DropdownMenuItem>
+        <DropdownMenuItem className="flex gap-1">
           <Building size={16} />
           <span>Perfil da Loja</span>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-rose-500 dark:text-rose-400">
+        <DropdownMenuItem className="flex gap-1 text-rose-500 dark:text-rose-400">
           <LogOut size={16} />
           <span>Sair</span>
         </DropdownMenuItem>
