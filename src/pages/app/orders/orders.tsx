@@ -1,16 +1,15 @@
-import { ArrowRight, Search, X } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import {
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+
+import { OrderTableFilters } from './order-table-filters'
+import { OrderTableRow } from './order-table-row'
 
 export function Orders() {
   return (
@@ -20,15 +19,8 @@ export function Orders() {
         <h1 className="text-3xl font-bold">Pedidos</h1>
       </div>
       <div className="flex flex-col gap-4">
-        <form className="flex items-center gap-2">
-          <label htmlFor="name">Filtros: </label>
-          <Input
-            id="name"
-            type="text"
-            placeholder="Nome do cliente"
-            className="h-8 w-full max-w-[340px] placeholder:text-muted-foreground"
-          />
-        </form>
+        <OrderTableFilters />
+
         <div className="rounded-md border">
           <Table>
             <TableHeader>
@@ -45,52 +37,7 @@ export function Orders() {
             </TableHeader>
             <TableBody>
               {Array.from({ length: 10 }).map((_, i) => {
-                return (
-                  <TableRow key={i}>
-                    <TableCell className="flex items-center justify-center">
-                      <Button variant="outline" size="xs">
-                        <Search size={12} />
-                        <span className="sr-only">Detalhes do pedido</span>
-                      </Button>
-                    </TableCell>
-                    <TableCell className="font-mono text-xs font-medium">
-                      1
-                    </TableCell>
-                    <TableCell className="text-muted-foreground">
-                      10min
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-slate-400" />
-                        <span className="font-medium text-muted-foreground">
-                          Pendente
-                        </span>
-                      </div>
-                    </TableCell>
-                    <TableCell>Carlos</TableCell>
-                    <TableCell>R$ 200,00</TableCell>
-                    <TableCell>
-                      <Button
-                        variant="outline"
-                        size="xs"
-                        className="flex items-center gap-2"
-                      >
-                        <ArrowRight size={12} />
-                        <span>Aprovar</span>
-                      </Button>
-                    </TableCell>
-                    <TableCell>
-                      <Button
-                        variant="ghost"
-                        size="xs"
-                        className="flex items-center gap-2"
-                      >
-                        <X size={12} />
-                        <span>Cancelar</span>
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                )
+                return <OrderTableRow key={i} />
               })}
             </TableBody>
           </Table>
