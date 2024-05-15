@@ -13,9 +13,7 @@ import {
 export function OrderTableFilters() {
   return (
     <form className="flex items-center gap-2">
-      <label htmlFor="name" className="text-sm font-semibold">
-        Filtros:{' '}
-      </label>
+      <span className="text-sm font-semibold">Filtros: </span>
       <Input
         id="idOrder"
         type="text"
@@ -30,7 +28,7 @@ export function OrderTableFilters() {
       />
       <Select>
         <SelectTrigger className="h-8 w-full max-w-[100px]">
-          <SelectValue />
+          <SelectValue placeholder="Status" />
         </SelectTrigger>
         <SelectContent defaultValue={'all'}>
           <SelectItem value="all">Todos</SelectItem>
