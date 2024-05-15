@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
+import { Pagination } from '@/components/pagination'
 import {
   Table,
   TableBody,
@@ -18,7 +19,7 @@ export function Orders() {
       <div>
         <h1 className="text-3xl font-bold">Pedidos</h1>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <OrderTableFilters />
 
         <div className="rounded-md border">
@@ -42,6 +43,8 @@ export function Orders() {
             </TableBody>
           </Table>
         </div>
+
+        <Pagination pageIndex={0} perPage={10} totalCount={100} />
       </div>
     </>
   )
