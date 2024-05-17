@@ -19,7 +19,7 @@ export function AccountMenu() {
           className="flex select-none items-center gap-2"
         >
           Pizza Shop
-          <ChevronDown size={16} />
+          <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -32,11 +32,11 @@ export function AccountMenu() {
         <DropdownMenuSeparator />
 
         <DropdownMenuItem className="flex gap-1">
-          <Building size={16} />
+          <Building className="h-4 w-4" />
           <span>Perfil da Loja</span>
         </DropdownMenuItem>
         <DropdownMenuItem className="flex gap-1 text-rose-500 dark:text-rose-400">
-          <LogOut size={16} />
+          <LogOut className="h-4 w-4" />
           <span>Sair</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

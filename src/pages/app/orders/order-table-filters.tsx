@@ -45,7 +45,7 @@ export function OrderTableFilters() {
         size="xs"
         className="flex items-center gap-2"
       >
-        <Search size={16} />
+        <Search className="h-4 w-4" />
         Filtrar resultados
       </Button>
       <Button
@@ -54,7 +54,7 @@ export function OrderTableFilters() {
         size="xs"
         className="flex items-center gap-2 text-red-600 dark:text-red-500"
       >
-        <X size={16} className="text-red-600 dark:text-red-500" />
+        <X className="h-4 w-4 text-red-600 dark:text-red-500" />
         Remover filtros
       </Button>
     </form>

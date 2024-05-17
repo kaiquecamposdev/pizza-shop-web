@@ -31,16 +31,16 @@ export function Pagination({
         </p>
         <div className="flex gap-2">
           <Button variant="outline" size="xs">
-            <ChevronsLeft size={14} />
+            <ChevronsLeft className="h-4 w-4" />
           </Button>
           <Button variant="outline" size="xs">
-            <ChevronLeft size={14} />
+            <ChevronLeft className="h-4 w-4" />
           </Button>
           <Button variant="outline" size="xs">
-            <ChevronRight size={14} />
+            <ChevronRight className="h-4 w-4" />
           </Button>
           <Button variant="outline" size="xs">
-            <ChevronsRight size={14} />
+            <ChevronsRight className="h-4 w-4" />
           </Button>
         </div>
       </div>
