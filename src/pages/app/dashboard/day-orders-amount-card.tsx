@@ -10,7 +10,7 @@ export function DayOrdersAmountCard({
   margin: number
 }) {
   return (
-    <Card className="flex flex-col gap-2 rounded-md shadow-lg">
+    <Card className="flex flex-col gap-2 rounded-md">
       <CardHeader className="flex-row justify-between space-y-0 pb-2">
         <h1 className="text-lg font-semibold leading-tight">Pedidos (dia)</h1>
         <Utensils className="h-4 w-4 text-muted-foreground" />

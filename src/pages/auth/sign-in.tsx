@@ -14,7 +14,7 @@ const SignInFormSchema = z.object({
   email: z.string().email(),
 })
 
-type SignInForm = z.infer<typeof SignInFormSchema>
+type SignInFormType = z.infer<typeof SignInFormSchema>
 
 export function SignIn() {
   const [searchParams] = useSearchParams()
@@ -23,7 +23,7 @@ export function SignIn() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<SignInForm>({
+  } = useForm<SignInFormType>({
     defaultValues: {
       email: searchParams.get('email') ?? '',
     },
@@ -33,7 +33,7 @@ export function SignIn() {
     mutationFn: signIn,
   })
 
-  async function handleSignIn(data: SignInForm) {
+  async function handleSignIn(data: SignInFormType) {
     await authenticate({
       email: data.email,
     })

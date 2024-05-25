@@ -17,7 +17,7 @@ const SignUpFormSchema = z.object({
   phone: z.string(),
 })
 
-type SignUpForm = z.infer<typeof SignUpFormSchema>
+type SignUpFormType = z.infer<typeof SignUpFormSchema>
 
 export function SignUp() {
   const navigate = useNavigate()
@@ -26,7 +26,7 @@ export function SignUp() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<SignUpForm>()
+  } = useForm<SignUpFormType>()
 
   const { mutateAsync: registerRestaurantFn } = useMutation({
     mutationFn: registerRestaurant,
@@ -37,7 +37,7 @@ export function SignUp() {
     managerName,
     email,
     phone,
-  }: SignUpForm) {
+  }: SignUpFormType) {
     await registerRestaurantFn({
       restaurantName,
       managerName,
